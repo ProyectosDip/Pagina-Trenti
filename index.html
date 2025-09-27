@@ -4697,7 +4697,7 @@
             Tus datos están protegidos. Al continuar, aceptas nuestro
             <a href="#" onclick="openModal('privacidadModal'); return false;"
               class="text-[var(--guinda)] underline hover:no-underline font-semibold">
-              Aviso de Privacidad
+              Aviso legal
             </a>.
           </p>
         </div>
@@ -4823,163 +4823,175 @@
       border: 1px solid rgba(120, 20, 20, .12);
     }
   </style>
-
-  <!-- Cookies -->
-  <div id="cookiesModal" data-modal
-    class="fixed inset-0 z-[1000] hidden flex items-end sm:items-center justify-center p-4">
-    <div class="modal-card w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden">
-      <div class="h-1 bg-gradient-to-r from-[var(--guinda)] via-[var(--dorado)] to-[var(--guinda)]"></div>
-      <div class="p-5">
-        <div class="flex items-start justify-between">
-          <h3 class="text-lg font-semibold text-[var(--guinda)]">Política de Cookies</h3>
-          <button class="text-slate-500 hover:text-[var(--guinda)]" onclick="closeModal('cookiesModal')">✕</button>
-        </div>
-        <div class="mt-3 max-h-[60vh] overflow-y-auto pr-1 text-sm text-slate-700 space-y-3">
-          <p>Este sitio utiliza cookies propias y de terceros con fines técnicos y de análisis para mejorar la
-            experiencia del usuario.</p>
-          <ul class="list-disc list-inside space-y-1">
-            <li><strong>Técnicas:</strong> necesarias para el correcto funcionamiento de la plataforma.</li>
-            <li><strong>De análisis:</strong> permiten conocer patrones de uso y mejorar la navegación.</li>
-          </ul>
-          <p>El usuario puede aceptar, rechazar o configurar el uso de cookies desde el banner inicial o en la
-            configuración del navegador.</p>
-          <!-- (Opcional) Controles simples sin persistencia -->
-          <div class="mt-4 flex gap-2">
-            <button class="px-3 py-2 rounded-lg bg-[var(--guinda)] text-white hover:opacity-90"
-              onclick="closeModal('cookiesModal')">Aceptar</button>
-            <button class="px-3 py-2 rounded-lg bg-white border hover:bg-gray-50"
-              onclick="closeModal('cookiesModal')">Rechazar</button>
-            <button class="px-3 py-2 rounded-lg bg-white border hover:bg-gray-50"
-              onclick="alert('Abre la configuración de tu navegador para administrar cookies.')">Configurar</button>
-          </div>
+<!-- Cookies -->
+<div id="cookiesModal" data-modal
+  class="fixed inset-0 z-[1000] hidden flex items-end sm:items-center justify-center p-4 bg-black/40">
+  <div class="modal-card w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden bg-white">
+    <div class="h-1 bg-gradient-to-r from-[var(--guinda)] via-[var(--dorado)] to-[var(--guinda)]"></div>
+    <div class="p-5">
+      <div class="flex items-start justify-between">
+        <h3 class="text-lg font-semibold text-[var(--guinda)]">Política de Cookies</h3>
+        <button class="text-slate-500 hover:text-[var(--guinda)]" onclick="closeModal('cookiesModal')">✕</button>
+      </div>
+      <div class="mt-3 max-h-[60vh] overflow-y-auto pr-1 text-sm text-slate-700 space-y-3">
+        <p>Este sitio utiliza cookies propias y de terceros con fines técnicos y de análisis para mejorar la experiencia del usuario.</p>
+        <ul class="list-disc list-inside space-y-1">
+          <li><strong>Técnicas:</strong> necesarias para el correcto funcionamiento de la plataforma.</li>
+          <li><strong>De análisis:</strong> permiten conocer patrones de uso y mejorar la navegación.</li>
+        </ul>
+        <p>El usuario puede aceptar, rechazar o configurar el uso de cookies desde el banner inicial o en la configuración del navegador.</p>
+        <div class="mt-4 flex gap-2">
+          <button class="px-3 py-2 rounded-lg bg-[var(--guinda)] text-white hover:opacity-90"
+            onclick="closeModal('cookiesModal')">Aceptar</button>
+          <button class="px-3 py-2 rounded-lg bg-white border hover:bg-gray-50"
+            onclick="closeModal('cookiesModal')">Rechazar</button>
+          <button class="px-3 py-2 rounded-lg bg-white border hover:bg-gray-50"
+            onclick="alert('Abre la configuración de tu navegador para administrar cookies.')">Configurar</button>
         </div>
       </div>
     </div>
   </div>
+</div>
 
- <!-- Aviso Legal -->
-  <div id="privacidadModal" data-modal
-    class="fixed inset-0 z-[1000] hidden flex items-end sm:items-center justify-center p-4">
-    <div class="modal-card w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden">
-      <div class="h-1 bg-gradient-to-r from-[var(--guinda)] via-[var(--dorado)] to-[var(--guinda)]"></div>
-      <div class="p-5">
-        <div class="flex items-start justify-between">
-          <h3 class="text-lg font-semibold text-[var(--guinda)]">Aviso de Privacidad</h3>
-          <button class="text-slate-500 hover:text-[var(--guinda)]" onclick="closeModal('privacidadModal')">✕</button>
-        </div>
-        <div class="mt-3 max-h-[60vh] overflow-y-auto pr-1 text-sm text-slate-700 space-y-3">
-          <p>
-            Este portal es administrado con fines informativos para difundir de manera accesible y transparente
-            información sobre programas sociales del Gobierno de México y del Gobierno de Baja California, los cuales
-            son de carácter público.
-          </p>
-          <p>
-            La información publicada en el portal tiene carácter meramente informativo y se basa en fuentes oficiales de
-            programas sociales. El portal no sustituye los canales oficiales de las dependencias federales o estatales.
-          </p>
-          <p>
-            El contenido puede ser consultado y compartido únicamente con fines informativos, no comerciales, ni
-            lucrativos y siempre citando la fuente.
-          </p>
-          <p>
-            Este portal no posee la titularidad de derechos de propiedad intelectual, ni de marcas, patentes o de
-            derechos de autor, relacionados con los programas sociales que se difunden en el portal.
-          </p>
-          <p>
-            No se realizarán transferencias de datos personales, salvo aquéllas que sean necesarias para atender
-            requerimientos debidamente fundados y motivados, provenientes de una autoridad competente.
-          </p>
-          <p>
-            Lo anterior, con fundamento en los artículos 6° Base A y 16 segundo párrafo de la Constitución Política de
-            los Estados Unidos Mexicanos; 3°, fracción XXVII, 4°, 16, 17 y 18 de la Ley General de Protección de Datos
-            Personales en Posesión de Sujetos Obligados.
-          </p>
-        </div>
+<!-- Aviso Legal -->
+<div id="avisoLegalModal" data-modal
+  class="fixed inset-0 z-[1000] hidden flex items-end sm:items-center justify-center p-4 bg-black/40">
+  <div class="modal-card w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden bg-white">
+    <div class="h-1 bg-gradient-to-r from-[var(--guinda)] via-[var(--dorado)] to-[var(--guinda)]"></div>
+    <div class="p-5">
+      <div class="flex items-start justify-between">
+        <h3 class="text-lg font-semibold text-[var(--guinda)]">Aviso Legal</h3>
+        <button class="text-slate-500 hover:text-[var(--guinda)]" onclick="closeModal('avisoLegalModal')">✕</button>
+      </div>
+      <div class="mt-3 max-h-[60vh] overflow-y-auto pr-1 text-sm text-slate-700 space-y-3">
+        <p>
+          Este portal es administrado con fines informativos para difundir de manera accesible y transparente
+          información sobre programas sociales del Gobierno de México y del Gobierno de Baja California, los cuales
+          son de carácter público.
+        </p>
+        <p>
+          La información publicada en el portal tiene carácter meramente informativo y se basa en fuentes oficiales de
+          programas sociales. El portal no sustituye los canales oficiales de las dependencias federales o estatales.
+        </p>
+        <p>
+          El contenido puede ser consultado y compartido únicamente con fines informativos, no comerciales, ni
+          lucrativos y siempre citando la fuente.
+        </p>
+        <p>
+          Este portal no posee la titularidad de derechos de propiedad intelectual, ni de marcas, patentes o de
+          derechos de autor, relacionados con los programas sociales que se difunden en el portal.
+        </p>
+        <p>
+          No se realizarán transferencias de datos personales, salvo aquéllas que sean necesarias para atender
+          requerimientos debidamente fundados y motivados, provenientes de una autoridad competente.
+        </p>
+        <p>
+          Lo anterior, con fundamento en los artículos 6° Base A y 16 segundo párrafo de la Constitución Política de
+          los Estados Unidos Mexicanos; 3°, fracción XXVII, 4°, 16, 17 y 18 de la Ley General de Protección de Datos
+          Personales en Posesión de Sujetos Obligados.
+        </p>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Política Ética -->
-  <div id="eticaModal" data-modal
-    class="fixed inset-0 z-[1000] hidden flex items-end sm:items-center justify-center p-4">
-    <div class="modal-card w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden">
-      <div class="h-1 bg-gradient-to-r from-[var(--guinda)] via-[var(--dorado)] to-[var(--guinda)]"></div>
-      <div class="p-5">
-        <div class="flex items-start justify-between">
-          <h3 class="text-lg font-semibold text-[var(--guinda)]">Política Ética</h3>
-          <button class="text-slate-500 hover:text-[var(--guinda)]" onclick="closeModal('eticaModal')">✕</button>
-        </div>
-        <div class="mt-3 max-h-[60vh] overflow-y-auto pr-1 text-sm text-slate-700">
-          <ul class="list-disc list-inside space-y-1">
-            <li>La información proviene de fuentes oficiales y verificables.</li>
-            <li>No se manipulan, distorsionan ni hacen usos indebidos de los datos.</li>
-            <li>Se promueve el acceso abierto y la transparencia.</li>
-            <li>No existe lucro ni sesgo político-partidista.</li>
-          </ul>
-        </div>
+<!-- Política Ética -->
+<div id="eticaModal" data-modal
+  class="fixed inset-0 z-[1000] hidden flex items-end sm:items-center justify-center p-4 bg-black/40">
+  <div class="modal-card w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden bg-white">
+    <div class="h-1 bg-gradient-to-r from-[var(--guinda)] via-[var(--dorado)] to-[var(--guinda)]"></div>
+    <div class="p-5">
+      <div class="flex items-start justify-between">
+        <h3 class="text-lg font-semibold text-[var(--guinda)]">Política Ética</h3>
+        <button class="text-slate-500 hover:text-[var(--guinda)]" onclick="closeModal('eticaModal')">✕</button>
+      </div>
+      <div class="mt-3 max-h-[60vh] overflow-y-auto pr-1 text-sm text-slate-700">
+        <ul class="list-disc list-inside space-y-1">
+          <li>La información proviene de fuentes oficiales y verificables.</li>
+          <li>No se manipulan, distorsionan ni hacen usos indebidos de los datos.</li>
+          <li>Se promueve el acceso abierto y la transparencia.</li>
+          <li>No existe lucro ni sesgo político-partidista.</li>
+        </ul>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Aviso de Privacidad -->
-  <div id="privacidadModal" data-modal
-    class="fixed inset-0 z-[1000] hidden flex items-end sm:items-center justify-center p-4">
-    <div class="modal-card w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden">
-      <div class="h-1 bg-gradient-to-r from-[var(--guinda)] via-[var(--dorado)] to-[var(--guinda)]"></div>
-      <div class="p-5">
-        <div class="flex items-start justify-between">
-          <h3 class="text-lg font-semibold text-[var(--guinda)]">Aviso de Privacidad</h3>
-          <button class="text-slate-500 hover:text-[var(--guinda)]" onclick="closeModal('privacidadModal')">✕</button>
-        </div>
-        <div class="mt-3 max-h-[60vh] overflow-y-auto pr-1 text-sm text-slate-700 space-y-3">
-          <p><strong>Identidad y domicilio del responsable:</strong> Fernando Castro Trenti, Av. Congreso de la Unión
-            no. 66, Col. El Parque, Venustiano Carranza, CDMX.</p>
-          <p><strong>Datos recabados:</strong> Nombre, correo electrónico, teléfono, estado y municipio de residencia.
-          </p>
-          <p><strong>Finalidad del tratamiento:</strong> Contactar a usuarios para compartir información sobre programas
-            sociales y elaborar reportes estadísticos de uso y participación.</p>
-          <p><strong>Transferencia de datos:</strong> No se comparten con terceros ajenos, salvo obligación legal.</p>
-          <p><strong>Derechos ARCO:</strong> Envíe su solicitud a
-            <a href="mailto:fernando.castro@diputados.gob.mx"
-              class="text-[var(--guinda)] underline">fernando.castro@diputados.gob.mx</a>.
-          </p>
-          <p><strong>Medidas de seguridad:</strong> Administrativas, técnicas y físicas para proteger su información
-            contra daño, pérdida, alteración o acceso no autorizado.</p>
-        </div>
+<!-- Aviso de Privacidad -->
+<div id="privacidadModal" data-modal
+  class="fixed inset-0 z-[1000] hidden flex items-end sm:items-center justify-center p-4 bg-black/40">
+  <div class="modal-card w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden bg-white">
+    <div class="h-1 bg-gradient-to-r from-[var(--guinda)] via-[var(--dorado)] to-[var(--guinda)]"></div>
+    <div class="p-5">
+      <div class="flex items-start justify-between">
+        <h3 class="text-lg font-semibold text-[var(--guinda)]">Aviso legal</h3>
+        <button class="text-slate-500 hover:text-[var(--guinda)]" onclick="closeModal('privacidadModal')">✕</button>
+      </div>
+      <div class="mt-3 max-h-[60vh] overflow-y-auto pr-1 text-sm text-slate-700 space-y-3">
+  <p>
+    Este portal es administrado con fines informativos para difundir de manera accesible y
+    transparente información sobre programas sociales del Gobierno de México y del
+    Gobierno de Baja California, los cuales son de carácter público.
+  </p>
+  <p>
+    La información publicada en el portal tiene carácter meramente informativo y se basa
+    en fuentes oficiales de programas sociales. El portal no sustituye los canales oficiales
+    de las dependencias federales o estatales.
+  </p>
+  <p>
+    El contenido puede ser consultado y compartido únicamente con fines informativos,
+    no comerciales, ni lucrativos y siempre citando la fuente.
+  </p>
+  <p>
+    Este portal no posee la titularidad de derechos de propiedad intelectual, ni de marcas,
+    patentes o de derechos de autor, relacionados con los programas sociales que se
+    difunden en el portal.
+  </p>
+  <p>
+    No se realizarán transferencias de datos personales, salvo aquéllas que sean
+    necesarias para atender requerimientos debidamente fundados y motivados,
+    provenientes de una autoridad competente.
+  </p>
+  <p>
+    Lo anterior, con fundamento en los artículos 6° Base A y 16 segundo párrafo de la
+    Constitución Política de los Estados Unidos Mexicanos; 3°, fracción XXVII, 4°, 16, 17 y
+    18 de la Ley General de Protección de Datos Personales en Posesión de Sujetos
+    Obligados.
+  </p>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Verificación de Datos -->
+<div id="verificacionModal" data-modal
+  class="fixed inset-0 z-[1000] hidden flex items-end sm:items-center justify-center p-4 bg-black/40">
+  <div class="modal-card w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden bg-white">
+    <div class="h-1 bg-gradient-to-r from-[var(--guinda)] via-[var(--dorado)] to-[var(--guinda)]"></div>
+    <div class="p-5">
+      <div class="flex items-start justify-between">
+        <h3 class="text-lg font-semibold text-[var(--guinda)]">Política de Verificación de Datos</h3>
+        <button class="text-slate-500 hover:text-[var(--guinda)]" onclick="closeModal('verificacionModal')">✕</button>
+      </div>
+      <div class="mt-3 max-h-[60vh] overflow-y-auto pr-1 text-sm text-slate-700">
+        <ul class="list-disc list-inside space-y-1">
+          <li>La información se obtiene de fuentes oficiales (páginas institucionales, comunicados, publicaciones de dependencias).</li>
+          <li>Todo dato se contrasta con al menos dos fuentes oficiales antes de su publicación.</li>
+          <li>Actualizaciones periódicas para evitar información obsoleta.</li>
+          <li>Si se detecta un error, se corrige y se señala la fecha de actualización.</li>
+          <li>Canal de contacto: <a href="mailto:fernando.castro@diputados.gob.mx" class="text-[var(--guinda)] underline">fernando.castro@diputados.gob.mx</a></li>
+        </ul>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Verificación de Datos -->
-  <div id="verificacionModal" data-modal
-    class="fixed inset-0 z-[1000] hidden flex items-end sm:items-center justify-center p-4">
-    <div class="modal-card w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden">
-      <div class="h-1 bg-gradient-to-r from-[var(--guinda)] via-[var(--dorado)] to-[var(--guinda)]"></div>
-      <div class="p-5">
-        <div class="flex items-start justify-between">
-          <h3 class="text-lg font-semibold text-[var(--guinda)]">Política de Verificación de Datos</h3>
-          <button class="text-slate-500 hover:text-[var(--guinda)]" onclick="closeModal('verificacionModal')">✕</button>
-        </div>
-        <div class="mt-3 max-h-[60vh] overflow-y-auto pr-1 text-sm text-slate-700">
-          <ul class="list-disc list-inside space-y-1">
-            <li>La información se obtiene de fuentes oficiales (páginas institucionales, comunicados, publicaciones de
-              dependencias).</li>
-            <li>Todo dato se contrasta con al menos dos fuentes oficiales antes de su publicación.</li>
-            <li>Actualizaciones periódicas para evitar información obsoleta.</li>
-            <li>Si se detecta un error, se corrige y se señala la fecha de actualización.</li>
-            <li>Canal de contacto: <a href="mailto:fernando.castro@diputados.gob.mx"
-                class="text-[var(--guinda)] underline">fernando.castro@diputados.gob.mx</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
 
 
 </body> <!-- Aqui termina mi body -->
 
 </html>
-
 
 
 
