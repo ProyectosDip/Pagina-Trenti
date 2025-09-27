@@ -4664,58 +4664,76 @@
 
   </script>
   <!-- Overlay de bienvenida -->
-  <div id="promoOverlay"
-    class="fixed inset-0 z-[9999] bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 animate-fadeInUp">
-    <div class="relative bg-white rounded-2xl shadow-2xl w-full max-w-md max-h-[95vh] overflow-y-auto flex flex-col">
+<div id="promoOverlay"
+  class="fixed inset-0 z-[9999] bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 animate-fadeInUp">
+  <div class="relative bg-white rounded-2xl shadow-2xl w-full max-w-md max-h-[95vh] overflow-y-auto flex flex-col">
 
-      <button id="closeOverlay" class="absolute top-2 right-2 z-10 p-2 rounded-full
-                   bg-gray-100 hover:bg-gray-200 text-gray-600
-                   transition-all duration-200">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
+    <button id="closeOverlay" class="absolute top-2 right-2 z-10 p-2 rounded-full
+                 bg-gray-100 hover:bg-gray-200 text-gray-600
+                 transition-all duration-200">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
 
-      <div class="p-4 md:p-6">
-        <div class="mb-4">
-          <img src="static/trenti.png" alt="Bienvenida" class="w-full h-auto object-contain rounded-lg mx-auto" />
-        </div>
+    <div class="p-4 md:p-6">
+      <div class="mb-4">
+        <img src="static/trenti.png" alt="Bienvenida" class="w-full h-auto object-contain rounded-lg mx-auto" />
+      </div>
 
-        <div class="text-center mb-6">
-          <h2 class="text-2xl font-bold text-[var(--guinda)] mb-2">
-            ¡Bienvenido!
-          </h2>
-          <p class="text-sm text-gray-700 leading-relaxed text-justify">
-            Esta plataforma te ayuda a descubrir los apoyos y programas que existen para ti a nivel federal, estatal y municipal.
-            Conoce iniciativas como las impulsadas por nuestra Presidenta Claudia Sheinbaum, cuyo objetivo es mejorar la economía y el bienestar de las familias mexicanas.
-            Nuestra meta es simple: darte acceso a la información que necesitas para que no se te escape ningún beneficio.
-          </p>
-        </div>
+      <div class="text-center mb-6">
+        <h2 class="text-2xl font-bold text-[var(--guinda)] mb-2">¡Bienvenido!</h2>
+        <p class="text-sm text-gray-700 leading-relaxed text-justify">
+          Esta plataforma te ayuda a descubrir los apoyos y programas que existen para ti a nivel federal, estatal y municipal.
+          Conoce iniciativas como las impulsadas por nuestra Presidenta Claudia Sheinbaum, cuyo objetivo es mejorar la economía y el bienestar de las familias mexicanas.
+          Nuestra meta es simple: darte acceso a la información que necesitas para que no se te escape ningún beneficio.
+        </p>
+      </div>
 
-        <div class="mb-4 text-center text-xs text-gray-600">
-          <p>
-            Tus datos están protegidos. Al continuar, aceptas nuestro
-            <a href="#" onclick="openModal('privacidadModal'); return false;"
-              class="text-[var(--guinda)] underline hover:no-underline font-semibold">
-              Aviso legal
-            </a>.
-          </p>
-        </div>
+      <div class="mb-4 text-center text-xs text-gray-600">
+        <p>
+          Tus datos están protegidos. Al continuar, aceptas nuestro
+          <a href="#" onclick="closePromoAndOpen('avisoLegalModal'); return false;"
+            class="text-[var(--guinda)] underline hover:no-underline font-semibold">
+            Aviso legal
+          </a>.
+        </p>
+      </div>
 
-        <div>
-          <button id="acceptConditions"
-            class="w-full bg-gradient-to-r from-[var(--guinda)] to-[var(--guinda-700)]
-                       text-white py-3 px-6 rounded-xl font-semibold
-                       hover:from-[var(--guinda-700)] hover:to-[var(--guinda)]
-                       transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--dorado)]">
-            Aceptar y continuar
-          </button>
-        </div>
+      <div>
+        <button id="acceptConditions"
+          class="w-full bg-gradient-to-r from-[var(--guinda)] to-[var(--guinda-700)]
+                     text-white py-3 px-6 rounded-xl font-semibold
+                     hover:from-[var(--guinda-700)] hover:to-[var(--guinda)]
+                     transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--dorado)]">
+          Aceptar y continuar
+        </button>
       </div>
     </div>
   </div>
+</div>
+
 
   <script>
+  // Cierra el overlay
+  function closePromo() {
+    const overlay = document.getElementById('promoOverlay');
+    if (overlay) {
+      overlay.remove(); // o overlay.classList.add('hidden');
+      document.documentElement.style.overflow = '';
+    }
+  }
+
+  // Cierra overlay y abre un modal por ID
+  function closePromoAndOpen(id) {
+    closePromo();
+    if (typeof openModal === 'function') openModal(id);
+  }
+
+  // Listeners para cerrar el overlay con los botones
+  document.getElementById('closeOverlay')?.addEventListener('click', closePromo);
+  document.getElementById('acceptConditions')?.addEventListener('click', closePromo);
+
     (function () {
       const overlay = document.getElementById('promoOverlay');
       const closeBtn = document.getElementById('closeOverlay');
